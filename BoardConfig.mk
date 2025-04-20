@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Device Path
-DEVICE_PATH := device/xiaomi/pond
+DEVICE_PATH := device/xiaomi/moon
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -27,10 +27,10 @@ TARGET_2ND_CPU_VARIANT := $(TARGET_CPU_VARIANT)
 TARGET_2ND_CPU_VARIANT_RUNTIME := $(TARGET_CPU_VARIANT)
 
 # Assertation
-TARGET_OTA_ASSERT_DEVICE := lake,lake_p,pond,pond_p
+TARGET_OTA_ASSERT_DEVICE := moon,moon_p,tides,tides_p
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := lake
+TARGET_BOOTLOADER_BOARD_NAME := moon
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -103,8 +103,8 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pond
-TARGET_RECOVERY_DEVICE_MODULES := libinit_pond
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_moon
+TARGET_RECOVERY_DEVICE_MODULES := libinit_moon
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -119,9 +119,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT :=
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
+#TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO_FBE := true
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 
@@ -183,8 +183,8 @@ TWRP_INCLUDE_LOGCAT := true
 #TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 TW_LOAD_VENDOR_BOOT_MODULES := true
-TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_LOAD_VENDOR_MODULES := "mt6358-accdet.ko xiaomi_touch.ko lct_tp.ko nt36528_spi.ko nt36528_spi.ko ft8057m_spi.ko ft8057p_spi.ko icnl9916_spi.ko"
+#TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+#TW_LOAD_VENDOR_MODULES := "xiaomi_usb_touch_notifier.ko tpd_notify.ko alspshub.ko alsps_common.ko xiaomi_touch.ko sensorHub.ko scp.ko mtk-dvfsrc-helper.ko MTK_INTERNAL_SPM.ko thermal_monitor.ko ccci_md_all.ko ccmni.ko rps_perf.ko ccci_auxadc.ko ccci_util_lib.ko mtk_gpufreq_mt6768.ko mtk_gpufreq_wrapper.ko mtk_gpu_hal.ko mtk_pbm.ko mtk_mdpm_v1.ko mtk_dynamic_loading_throttling.ko imgsensor_isp4.ko connadp.ko mtk_ppm_v3.ko Upower.ko sspm_v1.ko mediatek_static_power.ko mtk_low_battery_throttling.ko mtk_battery_oc_throttling.ko mtk_bp_thl.ko mtk_power_gs_v1.ko hwmon.ko nt36672c_spi.ko focaltech_tp.ko"
 
 # Maintainer
 TW_DEVICE_VERSION := wulan17

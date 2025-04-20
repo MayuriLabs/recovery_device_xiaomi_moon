@@ -1,4 +1,4 @@
-# TWRP Device Tree For Redmi 14C/Poco C75/Redmi A3 Pro (pond/lake)
+# TWRP Device Tree For Redmi 13/Poco M6 (moon/tides)
 
 ```
 #
